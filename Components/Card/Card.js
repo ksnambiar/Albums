@@ -3,10 +3,9 @@ import { Text, View , StyleSheet} from 'react-native'
 
 export default class Card extends Component {
     render() {
-        const {detail} = this.props
         return (
             <View style={styles.containerStyle}>
-            <Text>{detail.title}</Text>
+            {this.props.children}
             </View>
         )
     }
