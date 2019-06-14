@@ -8,7 +8,7 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
-
+import Header from "./Components/Header/Header"
 // const instructions = Platform.select({
 //   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
 //   android:
@@ -19,8 +19,8 @@ import {Platform, StyleSheet, Text, View} from 'react-native';
 export default class App extends Component {
   render() {
     return (
-      <View style={styles.container}>
-       
+      <View>
+          <Header headerText={'Album!'} />
       </View>
     );
   }
