@@ -9,6 +9,7 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 import Header from "./Components/Header/Header"
+import AlbumList from "./Components/Albums/AlbumList"
 // const instructions = Platform.select({
 //   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
 //   android:
@@ -17,10 +18,12 @@ import Header from "./Components/Header/Header"
 // });
 
 export default class App extends Component {
+  
   render() {
     return (
       <View>
           <Header headerText={'Album!'} />
+          <AlbumList />
       </View>
     );
   }
