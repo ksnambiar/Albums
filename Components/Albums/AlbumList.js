@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View , ActivityIndicator} from 'react-native'
+import { Text, View , ActivityIndicator ,ScrollView} from 'react-native'
 import axios from "axios"
 import AlbumDetail from "./AlbumDetail"
 
@@ -37,10 +37,9 @@ export default class AlbumList extends Component {
         }
 
         return (
-            <View>
-                <Text> AlbumLsit </Text>
+            <ScrollView>
                 {view}
-            </View>
+            </ScrollView>
         )
     }
 }
