@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
-import { Text, View ,StyleSheet ,Image } from 'react-native'
+import { Text, View ,StyleSheet ,Image ,Linking} from 'react-native'
 import Card from "../Card/Card"
 import CardSection from "../Card/CardSection"
 import Button from "../Card/Button"
 export default class AlbumDetail extends Component {
+    pressHandler(url){
+        Linking.openURL(url)
+    }
     render() {
         const {details} = this.props
         return (
@@ -23,7 +26,9 @@ export default class AlbumDetail extends Component {
                 <Image style={styles.imageStyle} source={{uri:details.image}} />
                 </CardSection>
                 <CardSection>
-                <Button />
+                <Button whenPress={this.pressHandler.bind(this,details.url)}>
+                Buy Now
+                </Button>
                 </CardSection>
                 </Card>
             </View>
